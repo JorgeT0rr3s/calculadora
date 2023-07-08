@@ -9,45 +9,29 @@
 
 <body onload="init();">
     <div class="cal__container">
-        <table class="calculadora">
-            <tr id="output_previus  output">
-                <td colspan="5"><span id="previus"></span></td>
-            </tr>
-            <tr id="output_current output">
-                <td colspan="5"><span id="resultado"></span></td>
-            </tr>
-            <tr>
-                <td><button id="siete">7</button></td>
-                <td><button id="ocho">8</button></td>
-                <td><button id="nueve">9</button></td>
-                <td><button id="clear">CE</button></td>
-                <td><button id="reset">C</button></td>
-
-            </tr>
-            <tr>
-                <td><button id="cuatro">4</button></td>
-                <td><button id="cinco">5</button></td>
-                <td><button id="seis">6</button></td>
-                <td><button id="division">/</button></td>
-                <td><button id="multiplicacion">*</button></td>
-            </tr>
-            <tr>
-                <td><button id="uno">1</button></td>
-                <td><button id="dos">2</button></td>
-                <td><button id="tres">3</button></td>
-                <td><button id="resta">-</button></td>
-                <td rowspan="2"><button id="suma">+</button></td>
-            </tr>
-            <tr>
-                <td colspan="2"><button id="cero">0</button></td>
-                <td><button id="punto">.</button></td>
-                <td><button id="igual">=</button></td>
-                
-            </tr>
-            <!-- <tr>
-            <td colspan="4"><span id="creditos">Hecho para DenisseEstrada.com</span></td>
-        </tr> -->
-        </table>
+        <div class="calculadora">
+            <div class="display">
+                <div class="data_previus"></div>
+                <div class="data_current"></div>
+            </div>
+            <button class="number">7</button>
+            <button class="number">8</button>
+            <button class="number">9</button>
+            <button class="all_clear">CE</button>
+            <button class="delete">C</button>
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>
+            <button class="operation">/</button>
+            <button class="operation">*</button>
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+            <button class="operation">-</button>
+            <button  id ="tworows" class="operation">+</button>
+            <button  id ="twocolums"class="number">0</button>
+            <button class="number">.</button>
+        </div>
     </div>
 
     <script src="index.js"></script>
