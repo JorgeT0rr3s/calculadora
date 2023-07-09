@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <title>Calculadora con JavaScript</title>
     <link type="text/css" href="index.css" rel="stylesheet">
+    <link rel="stylesheet" href="dark-mode.css" type="text/css">
     <script src="Calculadora.js" type="text/JavaScript"></script>
     <script src="display.js" type="text/JavaScript"></script>
 </head>
 
-<body onload="init();">
+<body onload="init();" >
+    <div class="switch-button">
+        <input type="checkbox" name="switch-button" id="switch-label" class="switch-button__checkbox">
+        <label for="switch-label" class="switch-button__label"></label>
+    </div>
     <div class="cal__container">
         <div class="calculadora">
             <div  class="display">
