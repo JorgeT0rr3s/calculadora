@@ -7,6 +7,8 @@
     
 
     
+
+    
     const display =new  Display (displayPrevius, displayCurrent);
 
     numberButtons.forEach(boton => {
@@ -18,6 +20,8 @@
     })
 
     deleteButton.addEventListener('click', () => display.borrar());
-    
+
     allClearButton.addEventListener('click', () => display.allclear());
+
+    displayCurrent.addEventListener ('input', () => display.limitarTexto())
 
