@@ -1,19 +1,26 @@
 /* estilos boton toogle */
 
 .switch-button {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
 }
+
 .switch-button .switch-button__checkbox {
     display: none;
 }
+
 .switch-button .switch-button__label {
-    background-color: #fe5e41;
+    background-color: #3f3e3d;
     width: 6rem;
     height: 3rem;
     border-radius: 3rem;
     display: inline-block;
     position: relative;
 }
+
 .switch-button .switch-button__label:before {
     transition: .2s;
     display: block;
@@ -25,32 +32,46 @@
     border-radius: 50%;
     box-shadow: inset 0px 0px 0px 1px #000;
 }
-.switch-button .switch-button__checkbox:checked + .switch-button__label {
-    background-color: #00a878;
+
+.switch-button .switch-button__checkbox:checked+.switch-button__label {
+    background-color: #bcdfd5;
 }
-.switch-button .switch-button__checkbox:checked + .switch-button__label:before {
+
+.switch-button .switch-button__checkbox:checked+.switch-button__label:before {
     transform: translateX(3rem);
 }
 
-.dark-mode{
+.dark-mode {
     background-color: #333030;
     transition: 0.3s;
 }
 
-.dark-mode .display{
+.dark-mode .display {
     background-color: #0000009d;
     color: #fdffff;
     transition: 0.3s;
 }
 
 .dark-mode .calculadora {
-    background-color: #575252c9;
+    background-color: #a19c9cc9;
     border-color: #fdffff;
     border: #fdffff;
     transition: 0.3s;
 }
-.dark-mode button{
+
+.dark-mode button {
     background-color: #15151a;
     color: #fdffff;
     transition: 0.3s;
+}
+
+.dark-mode h1 {
+    color: #fdffff;
+}
+
+@media screen and (max-width: 640px) {
+
+    .switch-button {
+        display: none;
+    }
 }
