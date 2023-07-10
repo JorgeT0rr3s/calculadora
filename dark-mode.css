@@ -12,7 +12,7 @@
     display: none;
 }
 
-.switch-button .switch-button__label {
+.switch-button__label {
     background-color: #3f3e3d;
     width: 6rem;
     height: 3rem;
@@ -67,11 +67,4 @@
 
 .dark-mode h1 {
     color: #fdffff;
-}
-
-@media screen and (max-width: 640px) {
-
-    .switch-button {
-        display: none;
-    }
 }
