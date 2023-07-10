@@ -63,19 +63,117 @@ button {
     grid-row: span 2;
 }
 
+/* estilos boton toogle */
+
+.switch-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.switch-button .switch-button__checkbox {
+    display: none;
+}
+
+.switch-button__label {
+    background-color: #3f3e3d;
+    width: 6rem;
+    height: 3rem;
+    border-radius: 3rem;
+    display: inline-block;
+    position: relative;
+}
+
+.switch-button .switch-button__label:before {
+    transition: .2s;
+    display: block;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background-color: #fdffff;
+    content: '';
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 0px 1px #000;
+}
+
+.switch-button .switch-button__checkbox:checked+.switch-button__label {
+    background-color: #bcdfd5;
+}
+
+.switch-button .switch-button__checkbox:checked+.switch-button__label:before {
+    transform: translateX(3rem);
+}
+
+.dark-mode {
+    background-color: #333030;
+    transition: 0.3s;
+}
+
+.dark-mode .display {
+    background-color: #0000009d;
+    color: #fdffff;
+    transition: 0.3s;
+}
+
+.dark-mode .calculadora {
+    background-color: #a19c9cc9;
+    border-color: #fdffff;
+    border: #fdffff;
+    transition: 0.3s;
+}
+
+.dark-mode button {
+    background-color: #15151a;
+    color: #fdffff;
+    transition: 0.3s;
+}
+
+.dark-mode h1 {
+    color: #fdffff;
+}
+
+
 @media screen and (max-width: 640px) {
+    body{
+        background-color: #f7f2f2;
+    }
     .calculadora {
         padding: 0%;
-        background-color: #f7f2f2;
+        background-color: #fcfcfc;
         height: 100vh;
         width: 100vw;
         display: grid;
         grid-template-rows: 20rem repeat(4, 1fr);
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 0;
+        border-radius: 0%;
     }
 
+    .display{
+        border-radius: 0%;
+        border-style: none;
+    }
     button {
         border-radius: 0;
+    }
+
+    .switch-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    }
+
+    .switch-button .switch-button__checkbox:checked+.switch-button__label{
+        background-color: #f7f2f2;
+    }
+    .dark-mode body::before{
+        background-color:  #333030;
+    }
+    .dark-mode body {
+        background-color: #0000009d;
     }
 }
