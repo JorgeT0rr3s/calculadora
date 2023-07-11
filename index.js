@@ -6,10 +6,6 @@
     const deleteButton = document.getElementsByClassName('delete')[0];
     const darkMode = document.getElementById('switch-label');
     const body = document.body
-
-    
-
-    
     const display =new  Display (displayPrevius, displayCurrent);
 
     numberButtons.forEach(boton => {

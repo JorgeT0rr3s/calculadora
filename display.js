@@ -14,6 +14,14 @@ class Display {
         }
         this.maxCaracteres = 10;
     }
+    // metodo para limitar la cantidad de texto ingresado en el display (no funciona :( ... ))
+    limitarTexto() {
+        const numeros = this.displayCurrent.innerText;
+
+        if (numeros.length > this.maxCaracteres) {
+            this.displayCurrent.innerText = numeros.slice(0, this.maxCaracteres);
+        }
+    }
     // metodo para borrar el ultimo valor digitado
     borrar() {
         this.currentValue = this.currentValue.toString().slice(0, -1);
@@ -59,12 +67,5 @@ class Display {
         this.printValue();
 
     }
-    // metodo para limitar la cantidad de texto ingresado en el display (no funciona :( ... ))
-    limitarTexto() {
-        const texto = this.displayCurrent.innerText;
-
-        if (texto.length > this.maxCaracteres) {
-            this.displayCurrent.innerText = texto.slice(0, this.maxCaracteres);
-        }
-    }
+    
 }
